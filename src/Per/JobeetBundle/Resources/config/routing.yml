@@ -1,0 +1,11 @@
+PerJobbetBundle_job:
+    resource: "@PerJobeetBundle/Resources/config/routing/job.yml"
+    prefix:   /job
+
+per_jobeet_homepage:
+    path:     /
+    defaults: { _controller: PerJobeetBundle:Job:index }
+    
+PerJobeetBundle_category:
+    pattern: /category/{slug}
+    defaults: { _controller: PerJobeetBundle:Category:show }

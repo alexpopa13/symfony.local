@@ -1,0 +1,32 @@
+per_job:
+    path:     /
+    defaults: { _controller: "PerJobeetBundle:Job:index" }
+
+per_job_show:
+    path:     /{company}/{location}/{id}/{position}
+    defaults: { _controller: "PerJobeetBundle:Job:show" }
+    requirements:
+        id: \d+
+
+per_job_new:
+    path:     /new
+    defaults: { _controller: "PerJobeetBundle:Job:new" }
+
+per_job_create:
+    path:     /create
+    defaults: { _controller: "PerJobeetBundle:Job:create" }
+    requirements: { _method: post }
+
+per_job_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PerJobeetBundle:Job:edit" }
+
+per_job_update:
+    path:     /{id}/update
+    defaults: { _controller: "PerJobeetBundle:Job:update" }
+    requirements: { _method: post|put }
+
+per_job_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PerJobeetBundle:Job:delete" }
+    requirements: { _method: post|delete }
